@@ -1,0 +1,243 @@
+﻿<Window
+    x:Class="TestingWPF.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:TestingWPF"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Master Of Users"
+    Width="750.8"
+    Height="813.203"
+    BorderBrush="#FFB6B6B6"
+    BorderThickness="5"
+    Closing="Window_Closed"
+    Foreground="#FF060101"
+    Loaded="Window_Loaded"
+    ResizeMode="NoResize"
+    WindowStyle="ThreeDBorderWindow"
+    mc:Ignorable="d">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Offset="0" Color="Black" />
+            <GradientStop Offset="1" Color="White" />
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
+        <Button
+            x:Name="Enter"
+            Width="200"
+            Height="40"
+            Margin="38,57,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Button.FontWeight="Bold"
+            Click="Enter_Click"
+            Content="Заведение"
+            FontSize="16"
+            RenderTransformOrigin="0.5,0.5" />
+        <!--  ="Enter_Click"  -->
+        <Button
+            x:Name="Modify"
+            Width="200"
+            Height="40"
+            Margin="38,122,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Modify_Click"
+            Content="Обновление"
+            FontSize="16"
+            FontWeight="Bold"
+            RenderTransformOrigin="0.49,0.518" />
+        <Button
+            x:Name="Delete"
+            Width="200"
+            Height="40"
+            Margin="38,182,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Delete_Click"
+            Content="Удаление"
+            FontSize="16"
+            FontWeight="Bold"
+            RenderTransformOrigin="0.5,0.5" />
+        <Button
+            x:Name="Search_btn"
+            Width="200"
+            Height="40"
+            Margin="440,242,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Search_btn_Click"
+            Content="Поиск"
+            FontSize="16"
+            FontWeight="Bold" />
+        <Button
+            x:Name="Issue_btn"
+            Width="200"
+            Height="40"
+            Margin="38,242,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Issue_btn_Click"
+            Content="Выдача прав"
+            FontSize="16"
+            FontWeight="Bold" />
+        <Button
+            x:Name="Confirm_button"
+            Width="215"
+            Height="26"
+            Margin="401,738,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Confirm_btn_Click"
+            Content="Применить изменения" />
+        <Button
+            x:Name="Get_list"
+            Width="215"
+            Height="26"
+            Margin="81,738,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Get_list_btn_Click"
+            Content="Получить список" />
+        <TextBox
+            x:Name="textBox_Login"
+            Width="373"
+            Height="29"
+            Margin="346,61,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="16"
+            FontStyle="Italic"
+            Text=""
+            TextWrapping="Wrap" />
+        <!--  {Binding Source=textBox_Login, Path=LOGIN, Mode=OneTime}  -->
+        <TextBox
+            x:Name="textBox_First_Name"
+            Width="373"
+            Height="29"
+            Margin="346,109,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="16"
+            FontStyle="Italic"
+            Text=""
+            TextWrapping="Wrap" />
+        <!--  "{Binding Source=textBox_First_Name, Path=FIRST_NAME, Mode=OneTime}"  -->
+        <TextBox
+            x:Name="textBox_Last_Name"
+            Width="373"
+            Height="29"
+            Margin="346,156,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="16"
+            FontStyle="Italic"
+            Text=""
+            TextWrapping="Wrap" />
+        <!--  "{Binding Sourse=textBox_Last_Name, Path=LAST_NAME, Mode=OneTime}"  -->
+        <TextBox
+            x:Name="textBox_Middle_Name"
+            Width="373"
+            Height="29"
+            Margin="346,205,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="16"
+            FontStyle="Italic"
+            Text=""
+            TextWrapping="Wrap" />
+        <!--  "{Binding Sourse=textBox_Middle_Name, Path=MIDDLE_NAME, Mode=OneTime}"  -->
+        <TextBlock
+            x:Name="textBlock_Login"
+            Width="74"
+            Height="29"
+            Margin="258,61,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="16"
+            FontWeight="SemiBold"
+            Text="Логин:"
+            TextAlignment="Right"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="textBlock_First_Name"
+            Width="74"
+            Height="29"
+            Margin="258,109,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="16"
+            FontWeight="SemiBold"
+            Text="Имя:"
+            TextAlignment="Right"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="textBlock_Last_Name"
+            Width="74"
+            Height="29"
+            Margin="258,156,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="16"
+            FontWeight="SemiBold"
+            TextAlignment="Right"
+            TextWrapping="Wrap"><Run Text="Фамилия" /><Run Text=":" /></TextBlock>
+        <TextBlock
+            x:Name="textBlock_Middle_Name"
+            Width="74"
+            Height="29"
+            Margin="258,205,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="16"
+            FontWeight="SemiBold"
+            TextAlignment="Right"
+            TextWrapping="Wrap"><Run Text="Отчество" /><Run Text=":" /></TextBlock>
+        <TextBlock
+            x:Name="textBlock_Label"
+            Width="734"
+            Height="26"
+            Margin="0,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="20"
+            FontWeight="Bold"
+            Text="Управление пользователями"
+            TextAlignment="Center"
+            TextWrapping="Wrap" />
+        <DataGrid
+            Name="UsersList"
+            Margin="0,311,0.4,57.4"
+            AutoGenerateColumns="False"
+            Background="#FFB1C6C8">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Width="3*"
+                    Binding="{Binding ID}"
+                    FontSize="14"
+                    Header="ID" />
+                <DataGridTextColumn
+                    Width="25*"
+                    Binding="{Binding LOGIN}"
+                    FontSize="14"
+                    Header="Логин" />
+                <DataGridTextColumn
+                    Width="22*"
+                    Binding="{Binding FIRST_NAME}"
+                    FontSize="14"
+                    Header="Имя" />
+                <DataGridTextColumn
+                    Width="25*"
+                    Binding="{Binding LAST_NAME}"
+                    FontSize="14"
+                    Header="Фамилия" />
+                <DataGridTextColumn
+                    Width="25*"
+                    Binding="{Binding MIDDLE_NAME}"
+                    FontSize="14"
+                    Header="Отчество" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

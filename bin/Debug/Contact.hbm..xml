@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Testing WPF"
+                   namespace="Testing WPF">
+
+  <class name="Contact">
+    <id name="ID" column="ID">
+      <generator class="identity"/>
+    </id>
+    <property name="LOGIN"/>
+    <property name="LAST_NAME"/>
+    <property name="FIRST_NAME"/>
+    <property name="MIDDLE_NAME"/>
+  </class>
+
+</hibernate-mapping>
